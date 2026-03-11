@@ -4,7 +4,7 @@
     chosen {
         zmk,kscan = &mock_kscan;
         zmk,physical-layout = &physical_layout0;
-        zephyr,display = &ssd1306;
+        zephyr,display = &oled;
     };
 
     mock_kscan: mock_kscan_0 {
@@ -43,6 +43,7 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)  RC(2,6) RC(2,7) RC(2,8) RC(2,9)
         oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
         reg = <0x3c>;
+
         width = <128>;
         height = <64>;
         segment-offset = <0>;
