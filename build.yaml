@@ -20,7 +20,7 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: grekorne _left
+    shield: grekorne_left
   - board: nice_nano_v2
     shield: grekorne_right
   - board: nice_nano_v2
