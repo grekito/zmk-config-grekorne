@@ -14,3 +14,28 @@ config ZMK_SPLIT
     default y
 
 endif
+
+# SPDX-License-Identifier: MIT
+
+if SHIELD_GREKORNE_DONGLE
+
+config ZMK_KEYBOARD_NAME
+	default "Grekorne Dongle"
+	
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
+	default y
+	
+config ZMK_USB
+	default y
+
+endif
+
+if SHIELD_GREKORNE_LEFT || SHIELD_GREKORNE_RIGHT || SHIELD_GREKORNE_DONGLE 
+
+config ZMK_SPLIT
+	default y
+
+config ZMK_BLE
+	default y
+	
+endif
