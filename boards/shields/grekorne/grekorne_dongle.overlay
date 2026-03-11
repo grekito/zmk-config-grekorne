@@ -7,23 +7,6 @@
         zephyr,display = &oled;
     };
 
-    &pinctrl {
-        i2c0_default: i2c0_default {
-            group1 {
-                psels = <NRF_PSEL(TWIM_SDA, 0, 17)>,
-                        <NRF_PSEL(TWIM_SCL, 0, 20)>;
-            };
-        };
-
-        i2c0_sleep: i2c0_sleep {
-            group1 {
-                psels = <NRF_PSEL(TWIM_SDA, 0, 17)>,
-                        <NRF_PSEL(TWIM_SCL, 0, 20)>;
-                low-power-enable;
-            };
-        };
-    };
-
     mock_kscan: mock_kscan_0 {
         compatible = "zmk,kscan-mock";
         columns = <0>;
@@ -54,7 +37,25 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)  RC(2,6) RC(2,7) RC(2,8) RC(2,9)
     };
 };
 
-i2c0 {
+
+&pinctrl {
+    i2c0_default: i2c0_default {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SDA, 0, 17)>,
+                    <NRF_PSEL(TWIM_SCL, 0, 20)>;
+            };
+        };
+
+    i2c0_sleep: i2c0_sleep {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SDA, 0, 17)>,
+                    <NRF_PSEL(TWIM_SCL, 0, 20)>;
+             low-power-enable;
+        };
+    };
+};
+
+&i2c0 {
     status = "okay";
     compatible = "nordic,nrf-twim";
     pinctrl-0 = <&i2c0_default>;
@@ -63,7 +64,7 @@ i2c0 {
     clock-frequency = <100000>;
 
     oled: ssd1306@3c {
-        compatible = "solomon, ssd1306fb";
+        compatible = "solomon,ssd1306fb";
         reg = <0x3c>;
         
         width = <128>;
