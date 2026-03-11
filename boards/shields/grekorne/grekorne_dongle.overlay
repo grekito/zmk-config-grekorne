@@ -75,20 +75,25 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)  RC(2,6) RC(2,7) RC(2,8) RC(2,9)
     pinctrl-0 = <&i2c0_default>;
     pinctrl-1 = <&i2c0_sleep>;
     pinctrl-names = "default", "sleep";
-    
+
     status = "okay";
     clock-frequency = <I2C_BITRATE_FAST>;
 
     ssd1306128x64: ssd1306@3c {
-    compatible = "solomon,ssd1306fb";
-    reg = <0x3c>;
-    width = <128>;
-    height = <64>;
+        compatible = "solomon,ssd1306fb";
+        reg = <0x3c>;
 
-    segment-remap;
-    com-invdir;
+        width = <128>;
+        height = <64>;
 
-    multiplex-ratio = <63>;
-    prechargep = <0x22>;
-};
+        segment-offset = <0>;
+        page-offset = <0>;
+        display-offset = <0>;
+        multiplex-ratio = <63>;
+
+        segment-remap;
+        com-invdir;
+
+        prechargep = <0x22>;
+    };
 };
