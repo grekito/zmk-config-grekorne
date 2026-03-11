@@ -2,7 +2,7 @@
 
 / {
     chosen {
-        zmk,display = &oled;
+        zephyr,display = &oled;
         zmk,matrix_transform = &dummy_transform;
     };
 
