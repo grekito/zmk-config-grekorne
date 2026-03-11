@@ -1,12 +1,17 @@
+#include <dt-bindings/zmk/matrix_transform.h>
+#include <dt-bindings/zmk/physical_layout.h>
+
 / {
     chosen {
         zmk,display = &oled;
+        zmk,matrix_transform = &dummy_transform;
     };
 
-    physical_layout0: physical_layout_0 {
-        compatible = "zmk,physical-layout";
-        display-name = "Dongle";
-        keys = <>;
+    dummy_transform: matrix_transform_0 {
+        compatible = "zmk,matrix-transform";
+        rows = <1>;
+        columns = <1>;
+        map = <RC(0,0)>;
     };
 };
 
