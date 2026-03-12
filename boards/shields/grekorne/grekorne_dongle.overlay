@@ -16,6 +16,7 @@
             &output_w      96   0
             &peripheral_w   0  24
             &wpm_w          0  48
+            &nonexistent_widget 10 10
         >;
     };
 
