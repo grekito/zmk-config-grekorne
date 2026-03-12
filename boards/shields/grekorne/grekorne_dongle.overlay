@@ -7,6 +7,19 @@
         zmk,physical-layout = &physical_layout0;
     };
 
+    nice_status: status_screen {
+        compatible = "zmk,status-screen";
+
+        widgets = <
+            &layer_status       0   0
+            &output_status      96  0
+
+            &peripheral_status  0   24
+
+            &wpm_status         0   48
+        >;
+    };
+
     mock_kscan: mock_kscan_0 {
         compatible = "zmk,kscan-mock";
         columns = <0>;
