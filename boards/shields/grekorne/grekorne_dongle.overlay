@@ -5,34 +5,6 @@
         zephyr,display = &oled; 
         zmk,kscan = &mock_kscan;
         zmk,physical-layout = &physical_layout0;
-        zmk,display-status-screen = &nice_status;
-    };
-
-    nice_status: status_screen {
-        compatible = "zmk,status-screen";
-
-        widgets = <
-            &layer_w        0   0
-            &output_w      96   0
-            &peripheral_w   0  24
-            &wpm_w          0  48
-        >;
-    };
-
-    layer_w: layer_status {
-        compatible = "zmk,widget-layer-status";
-    };
-
-    output_w: output_status {
-        compatible = "zmk,widget-output-status";
-    };
-
-    peripheral_w: peripheral_status {
-        compatible = "zmk,widget-peripheral-status";
-    };
-
-    wpm_w: wpm_status {
-        compatible = "zmk,widget-wpm-status";
     };
 
     mock_kscan: mock_kscan_0 {
