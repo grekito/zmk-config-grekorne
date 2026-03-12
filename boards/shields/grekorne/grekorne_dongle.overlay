@@ -11,15 +11,29 @@
         compatible = "zmk,status-screen";
 
         widgets = <
-            &layer_status       0   0
-            &output_status      96  0
-
-            &peripheral_status  0   24
-
-            &wpm_status         0   48
+            &layer_w        0   0
+            &output_w      96   0
+            &peripheral_w   0  24
+            &wpm_w          0  48
         >;
     };
 
+    layer_w: layer_status {
+        compatible = "zmk,widget-layer-status";
+    };
+
+    output_w: output_status {
+        compatible = "zmk,widget-output-status";
+    };
+
+    peripheral_w: peripheral_status {
+        compatible = "zmk,widget-peripheral-status";
+    };
+
+    wpm_w: wpm_status {
+        compatible = "zmk,widget-wpm-status";
+    };
+    
     mock_kscan: mock_kscan_0 {
         compatible = "zmk,kscan-mock";
         columns = <0>;
