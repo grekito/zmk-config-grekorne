@@ -32,9 +32,6 @@ lv_obj_t *zmk_display_status_screen() {
     lv_style_set_text_line_space(&global_style, 1);
     lv_obj_add_style(screen, &global_style, LV_PART_MAIN);
     
-    zmk_widget_output_status_init(&output_status_widget, screen);
-    lv_obj_align(zmk_widget_output_status_obj(&output_status_widget), LV_ALIGN_TOP_LEFT, 0, 0);
-
 #if IS_ENABLED(CONFIG_ZMK_BATTERY)
     zmk_widget_dongle_battery_status_init(&dongle_battery_status_widget, screen);
     lv_obj_align(zmk_widget_dongle_battery_status_obj(&dongle_battery_status_widget), LV_ALIGN_TOP_RIGHT, 0, 0);
