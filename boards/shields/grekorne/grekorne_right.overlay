@@ -7,7 +7,12 @@
 / {
 	chosen {
 		zmk,kscan = &default_kscan;
+		zmk,battery = &vbatt;
 	};
+
+	vbatt: vbatt {
+        compatible = "zmk,battery-nrf-vddh";
+    };
 
 	default_kscan: kscan {
 		compatible = "zmk,kscan-gpio-matrix";
