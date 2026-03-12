@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-#include <zmk/event_manager.h>
+#include <zmk/event_manager/event_manager.h>
 #include <zmk/events/layer_state_changed.h>
 
 static lv_obj_t *layer_label;

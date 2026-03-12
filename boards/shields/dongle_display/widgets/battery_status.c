@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-#include <zmk/event_manager.h>
+#include <zmk/event_manager/event_manager.h>
 #include <zmk/events/battery_state_changed.h>
 #include <zmk/events/split_peripheral_status_changed.h>
 
