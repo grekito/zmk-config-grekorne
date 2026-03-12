@@ -8,8 +8,17 @@
 	chosen {
 		zmk,kscan = &default_kscan;
 		zephyr,display = &oled;
+		zmk,display-status-screen = &status_screen;
 	};
 
+	status_screen: status_screen {
+        compatible = "zmk,display-status-screen";
+
+        widgets = <
+            &layer_status
+            &battery_status
+        >;
+    };
 
 	default_kscan: kscan {
 		compatible = "zmk,kscan-gpio-matrix";
@@ -64,6 +73,9 @@
         page-offset = <0>;
         display-offset = <0>;
         multiplex-ratio = <31>;
+
+		segment-remap;
+        com-invdir;
 
         inversion-on;
         prechargep = <0x22>;
