@@ -5,6 +5,7 @@
         zephyr,display = &oled; 
         zmk,kscan = &mock_kscan;
         zmk,physical-layout = &physical_layout0;
+        zmk,display-status-screen = &nice_status;
     };
 
     nice_status: status_screen {
