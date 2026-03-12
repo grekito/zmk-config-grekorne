@@ -20,6 +20,9 @@ if SHIELD_GREKORNE_LEFT || SHIELD_GREKORNE_RIGHT || SHIELD_GREKORNE_DONGLE
 config ZMK_SPLIT
     default y
 
+config ZMK_BLE
+	default y
+
 if ZMK_DISPLAY
 
 config I2C
