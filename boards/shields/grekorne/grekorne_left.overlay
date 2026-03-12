@@ -7,6 +7,16 @@
 		zmk,display-status-screen = &status_screen;
 	};
 
+	widgets {
+        layer_status: layer_status {
+            compatible = "zmk,widget-layer-status";
+        };
+
+        battery_status: battery_status {
+            compatible = "zmk,widget-battery-status";
+        };
+    };
+
 	status_screen: status_screen {
         compatible = "zmk,display-status-screen";
 
