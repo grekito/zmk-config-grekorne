@@ -3,9 +3,18 @@
 / {
     chosen {
         zephyr,display = &oled; 
+        zephyr,pointing = &mouse;
         zmk,kscan = &mock_kscan;
         zmk,physical-layout = &physical_layout0;
     };
+
+    mouse: pointing_device {
+    compatible = "zmk,pointing-device";
+    label = "MOUSE";
+    buttons = <3>;          // 3 mouse buttons (L, M, R)
+    movement = "relative";  // relative movement
+    sampling-period-ms = <10>; // optional, updates every 10 ms
+};
 
     mock_kscan: mock_kscan_0 {
         compatible = "zmk,kscan-mock";
