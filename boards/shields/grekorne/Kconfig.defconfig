@@ -1,17 +1,14 @@
-if SHIELD_GREKORNE_DONGLE || SHIELD_GREKORNE_LEFT
+if SHIELD_GREKORNE_DONGLE
 
 config ZMK_KEYBOARD_NAME
-    default "Grekorne"
+    default "Grekorne Dongle"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
-# if SHIELD_GREKORNE_DONGLE
+config ZMK_USB
+    default y
 
-# config ZMK_USB
-#     default y
-
-# endif
 
 endif
 
