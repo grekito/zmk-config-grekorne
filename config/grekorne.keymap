@@ -27,7 +27,7 @@
             >;
         };
 
-        layer_1 {
+        NUM {
 // ------------------------------------------------------------------------------------------------
 // symbols / numbers
             bindings = <
@@ -38,13 +38,13 @@
             >;
         };
 
-        layer_2 {
+        FUN {
 // ------------------------------------------------------------------------------------------------
 // function keys + mouse
             bindings = <
 &trans     &trans  &kp F1  &kp F2   &kp F3   &kp F4         &trans          &trans          &trans        &trans           &trans  &trans
 &trans     &trans  &kp F5  &kp F6   &kp F7   &kp F8         &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &trans  &trans
-&trans     &trans  &kp F9  &kp F10  &kp F11  &kp F12        &trans          &trans          &trans        &trans           &kp RA(N)  &trans
+&trans     &trans  &kp F9  &kp F10  &kp F11  &kp F12        &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3  &out OUT_TOG           &kp RA(N)  &trans
                               &trans   &trans   &trans      &trans          &trans          &trans
             >;
         };
