@@ -1,0 +1,6 @@
+if SHILED_DONGLE_MACROPAD
+
+config ZMK_HID_CONSUMER_REPORT_USAGES_FULL
+    default y
+    
+endif
