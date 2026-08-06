@@ -4,10 +4,6 @@
     row-offset = <4>;
 };
 
-&right_encoder {
-    status = "okay";
-};
-
 / {
     chosen {
         zmk,kscan = &default_kscan;
@@ -31,9 +27,13 @@
 
     right_encoder: encoder_right {
         compatible = "alps,ec11";
-        a-gpios = <PIN_A (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <PIN_B (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        a-gpios = <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <80>;
         status = "disabled";
     };
+};
+
+&right_encoder {
+    status = "okay";
 };
