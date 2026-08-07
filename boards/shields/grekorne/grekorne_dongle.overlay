@@ -80,3 +80,9 @@ RC(6,0) RC(6,1) RC(6,2) RC(6,3) RC(6,4)
         prechargep = <0x22>;
     };
 };
+
+&right_encoder {
+    a-gpios = <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+    b-gpios = <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+    status = "okay";
+};
