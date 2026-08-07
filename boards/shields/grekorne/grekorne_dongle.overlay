@@ -6,6 +6,14 @@
         zmk,kscan = &mock_kscan;
         zmk,physical-layout = &physical_layout0;
     };
+    
+    right_encoder: encoder_right {
+        compatible = "alps,ec11";
+        a-gpios = <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        steps = <80>;
+        status = "disabled";
+    };
 
     mock_kscan: mock_kscan_0 {
         compatible = "zmk,kscan-mock";
@@ -79,4 +87,8 @@ RC(6,0) RC(6,1) RC(6,2) RC(6,3) RC(6,4)
         inversion-on;
         prechargep = <0x22>;
     };
+};
+
+&right_encoder {
+    status = "okay";
 };
