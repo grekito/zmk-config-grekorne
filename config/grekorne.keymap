@@ -10,11 +10,23 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/outputs.h>
 
+&sensors {
+    triggers-per-rotation = <20>;
+};
+
 / {
     sensors: sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&right_encoder>;
         triggers-per-rotation = <20>;
+    };
+
+    behaviors {
+        rinc_dec_kp: sensor_rotate_kp {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+        };
     };
 
     keymap {
