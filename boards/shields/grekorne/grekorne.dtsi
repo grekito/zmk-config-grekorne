@@ -21,7 +21,7 @@
     right_encoder: encoder_right {
         compatible = "alps,ec11"; 
         steps = <80>;
-        status = "disabled";
+        status = "okay";
     };
 
     sensors: sensors {
