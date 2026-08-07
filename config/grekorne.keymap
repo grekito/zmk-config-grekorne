@@ -25,7 +25,7 @@
         rinc_dec_kp: sensor_rotate_kp {
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <0>;
-            bindings = <&kp PG_UP>, <&kp PG_DN>;
+            bindings = <&kp PAGE_UP>, <&kp PAGE_DN>;
         };
     };
 
