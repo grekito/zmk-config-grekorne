@@ -48,7 +48,7 @@
 &kp F18  &kp F19  &kp F20  &kp F21  &kp F22
 &kp F23  &kp F24  &trans   &trans   &tog 3
             >;
-            sensor-bindings = <&rinc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&rinc_dec_kp PAGE_UP PAGE_DN>;
         };
 
         NUM {
