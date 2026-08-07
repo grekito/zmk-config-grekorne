@@ -18,6 +18,12 @@
         zmk,physical-layout = &foostan_corne_6col_layout;
     };
 
+    right_encoder: encoder_right {
+        compatible = "alps,ec11"; 
+        steps = <80>;
+        status = "disabled";
+    };
+
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
         columns = <12>;
