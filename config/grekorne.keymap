@@ -34,7 +34,7 @@
 
 &kp F13  &kp F14  &kp F15     &kp F16      &kp F17
 &kp F18  &kp F19  &kp F20     &kp F21      &kp F22
-&kp F23  &kp F24  &kp LS(F13) &kp LS(F14)  &kp LS(F15)
+&kp F23  &kp F24  &kp LS(F13) &kp LS(F14)  &tog 3
             >;
         };
 
@@ -48,9 +48,9 @@
 &kp LSHFT         &kp N6    &kp N7  &kp N8       &kp N9    &kp N0           &kp UNDER       &kp PLUS    &kp TILDE   &kp LBRC  &kp RBRC  &trans
                                     &trans       &trans    &trans           &trans          &trans      &trans
 
-&kp F13  &kp F14  &kp F15  &kp F16  &kp F17
-&kp F18  &kp F19  &kp F20  &kp F21  &kp F22
-&kp F23  &kp F24  &trans   &trans   &trans
+&trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -64,10 +64,26 @@
 &kp CAPSLOCK  &trans  &kp F9  &kp F10  &kp F11  &kp F12     &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &trans     &trans  &out OUT_TOG
                               &trans   &trans   &trans      &trans        &trans          &kp DELETE
 
-&kp F13  &kp F14  &kp F15  &kp F16  &kp F17
-&kp F18  &kp F19  &kp F20  &kp F21  &kp F22
-&kp F23  &kp F24  &trans   &trans   &trans
+&trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans
             >;
+        };
+
+        NPAD {
+          display-name = "NPAD";
+// =================================================================================================
+// numpad / macropad
+          bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans     &trans  &trans  &trans
+
+&kp N1     &kp N2     &kp N3    &kp N4  &kp N5
+&kp N6     &kp N7     &kp N8    &kp N9  &kp N0
+&kp EQUAL  &kp MINUS  &kp PLUS  &trans  &trans
+          >;
         };
     };
 };
